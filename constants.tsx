@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Users, 
@@ -9,40 +8,111 @@ import {
   Code, 
   Layout, 
   Database, 
-  Search 
+  Search,
+  Terminal,
+  ShieldCheck,
+  Smartphone
 } from 'lucide-react';
 import { Feature, Review, PricingPlan, Expert } from './types';
 
-export const CURRICULUM = [
-  {
-    week: "Модуль 1",
-    title: "Основы и Мышление",
-    description: "Погружение в индустрию, настройка окружения и база выбранного направления.",
-    topics: ["Введение в профессию", "Инструменты разработки", "Soft Skills специалиста"],
-    icon: <Search className="w-5 h-5" />
-  },
-  {
-    week: "Модуль 2",
-    title: "Практический Интенсив",
-    description: "Работа над первым реальным проектом под руководством ментора.",
-    topics: ["Глубокое погружение в технологии", "Архитектурные паттерны", "Работа с API"],
-    icon: <Code className="w-5 h-5" />
-  },
-  {
-    week: "Модуль 3",
-    title: "Масштабирование",
-    description: "Сложные интерфейсы, оптимизация и работа в команде.",
-    topics: ["State Management", "Тестирование кода", "CI/CD основы"],
-    icon: <Layout className="w-5 h-5" />
-  },
-  {
-    week: "Модуль 4",
-    title: "Финальный Проект",
-    description: "Создание портфолио и подготовка к выходу на рынок.",
-    topics: ["Разработка MVP", "Подготовка к Tech-интервью", "Дипломная защита"],
-    icon: <Database className="w-5 h-5" />
-  }
+export const TRACKS = [
+  { id: 'frontend', label: 'Frontend Разработка', icon: <Layout className="w-4 h-4" /> },
+  { id: 'backend', label: 'Python Backend', icon: <Terminal className="w-4 h-4" /> },
+  { id: 'qa', label: 'QA Инженер', icon: <ShieldCheck className="w-4 h-4" /> }
 ];
+
+export const CURRICULUM = {
+  frontend: [
+    {
+      week: "Модуль 1",
+      title: "Основы и Мышление",
+      description: "Погружение в индустрию, настройка окружения и база JavaScript.",
+      topics: ["Введение в профессию", "Инструменты разработки", "Soft Skills специалиста"],
+      icon: <Search className="w-5 h-5" />
+    },
+    {
+      week: "Модуль 2",
+      title: "React и Экосистема",
+      description: "Работа над первым реальным SPA приложением под руководством ментора.",
+      topics: ["Компонентный подход", "Хуки и состояние", "Работа с API"],
+      icon: <Code className="w-5 h-5" />
+    },
+    {
+      week: "Модуль 3",
+      title: "Архитектура",
+      description: "Сложные интерфейсы, оптимизация и работа в команде.",
+      topics: ["State Management (Redux)", "Тестирование кода", "CI/CD основы"],
+      icon: <Layout className="w-5 h-5" />
+    },
+    {
+      week: "Модуль 4",
+      title: "Финальный Проект",
+      description: "Создание портфолио и подготовка к выходу на рынок.",
+      topics: ["Разработка MVP", "Подготовка к Tech-интервью", "Дипломная защита"],
+      icon: <Database className="w-5 h-5" />
+    }
+  ],
+  backend: [
+    {
+      week: "Модуль 1",
+      title: "Python Основы",
+      description: "Синтаксис языка, структуры данных и алгоритмическое мышление.",
+      topics: ["Типы данных Python", "ООП парадигма", "Git и командная строка"],
+      icon: <Terminal className="w-5 h-5" />
+    },
+    {
+      week: "Модуль 2",
+      title: "Django & API",
+      description: "Разработка серверной части веб-приложений.",
+      topics: ["Django Framework", "REST API", "Работа с базами данных"],
+      icon: <Database className="w-5 h-5" />
+    },
+    {
+      week: "Модуль 3",
+      title: "DevOps для Backend",
+      description: "Развертывание приложений и контейнеризация.",
+      topics: ["Docker & Kubernetes", "Linux администрирование", "Cloud сервисы"],
+      icon: <CheckCircle2 className="w-5 h-5" />
+    },
+    {
+      week: "Модуль 4",
+      title: "Highload Проект",
+      description: "Разработка масштабируемого сервиса для портфолио.",
+      topics: ["Асинхронность", "Микросервисы", "Финальный проект"],
+      icon: <Code className="w-5 h-5" />
+    }
+  ],
+  qa: [
+    {
+      week: "Модуль 1",
+      title: "Теория Тестирования",
+      description: "Виды тестирования, тест-дизайн и документация.",
+      topics: ["Жизненный цикл ПО", "Баг-репорты", "Тест-кейсы"],
+      icon: <Search className="w-5 h-5" />
+    },
+    {
+      week: "Модуль 2",
+      title: "Ручное Тестирование",
+      description: "Практика тестирования веб и мобильных приложений.",
+      topics: ["DevTools", "API Testing (Postman)", "SQL для QA"],
+      icon: <Smartphone className="w-5 h-5" />
+    },
+    {
+      week: "Модуль 3",
+      title: "Автоматизация",
+      description: "Введение в автотесты на Python/JS.",
+      topics: ["Selenium / Playwright", "PyTest", "CI/CD пайплайны"],
+      icon: <Code className="w-5 h-5" />
+    },
+    {
+      week: "Модуль 4",
+      title: "Старт Карьеры",
+      description: "Подготовка к сертификации и собеседованиям.",
+      topics: ["ISTQB подготовка", "Мок-интервью", "Трудоустройство"],
+      icon: <Award className="w-5 h-5" />
+    }
+  ]
+};
 
 export const FEATURES: Feature[] = [
   { id: 1, title: "Индивидуальный трек", description: "Программа адаптируется под ваш темп.", icon: "Target" },
@@ -110,7 +180,6 @@ export const REVIEWS: Review[] = [
   }
 ];
 
-// Added missing COMPANIES export for TrustBar component
 export const COMPANIES = [
   "Google",
   "Yandex",
